@@ -46,23 +46,32 @@
     <link rel="stylesheet" href="applab/applab.css">
     <link rel="stylesheet" href="style.css">
   </head>
-  <script>
+<script>
   function resizeApp() {
     const app = document.getElementById("divApplab");
-    if (app) {
-      app.style.width = window.innerWidth + "px";
-      app.style.height = window.innerHeight + "px";
-    }
-    // Also resize each screen inside
-    document.querySelectorAll(".screen").forEach(screen => {
-      screen.style.width = window.innerWidth + "px";
-      screen.style.height = window.innerHeight + "px";
-      screen.style.left = "0px";
-      screen.style.top = "0px";
-    });
+    if (!app) return;
+
+    // Your original app size from App Lab
+    const baseWidth = 320;
+    const baseHeight = 450;
+
+    // Get available screen size
+    const scaleX = window.innerWidth / baseWidth;
+    const scaleY = window.innerHeight / baseHeight;
+
+    // Pick the smaller scale to keep aspect ratio
+    const scale = Math.min(scaleX, scaleY);
+
+    // Apply scale transform
+    app.style.transform = "scale(" + scale + ")";
+    app.style.transformOrigin = "top left";
+
+    // Adjust container to center it
+    app.style.position = "absolute";
+    app.style.left = ((window.innerWidth - baseWidth * scale) / 2) + "px";
+    app.style.top = ((window.innerHeight - baseHeight * scale) / 2) + "px";
   }
 
-  // Run on load and whenever window resizes
   window.addEventListener("load", resizeApp);
   window.addEventListener("resize", resizeApp);
 </script>
