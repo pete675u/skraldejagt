@@ -1,7 +1,12 @@
 <style>
   html, body {
-    overflow: hidden; /* disables scrolling */
-    touch-action: none; /* prevent touch gestures like pull-to-refresh */
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;     /* disable scrollbars */
+      touch-action: none;   /* block pull-to-refresh + gestures */
+      background: #111;     /* optional background color */
   }
 </style>
 
@@ -9,7 +14,7 @@
   <head>
     <title>Kod forløb app</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="preload" href="applab/fa-brands-400.woff2" as="font">
     <link rel="preload" href="applab/fa-solid-900.woff2" as="font">
     <link rel="preload" href="applab/fa-regular-400.woff2" as="font">
