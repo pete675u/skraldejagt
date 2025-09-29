@@ -1,13 +1,31 @@
 <html>
 <style>
   html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* disable scrolling */
+    touch-action: none; /* block gestures like pull-to-refresh */
+  }
+
+  /* optional: center your app’s container */
+  #app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+  
+<style>
+  html, body {
     overflow: hidden; /* disables scrolling */
     touch-action: none; /* prevent touch gestures like pull-to-refresh */
   }
 </style>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-</head>
   <head>
     <title>Kod forløb app</title>
     <meta charset="utf-8" />
