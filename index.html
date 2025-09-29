@@ -51,32 +51,44 @@ function resizeApp() {
   const app = document.getElementById("divApplab");
   if (!app) return;
 
-  // Base size from App Lab export
+  // App Lab's base export size
   const baseWidth = 320;
   const baseHeight = 450;
 
   // Current screen size
   const scaleX = window.innerWidth / baseWidth;
   const scaleY = window.innerHeight / baseHeight;
-
-  // Choose the smaller scale to keep proportions
   const scale = Math.min(scaleX, scaleY);
 
-  // Apply scaling
-  app.style.transform = `scale(${scale})`;
-  app.style.transformOrigin = "top left";
-
-  // Position so it’s centered
-  const offsetX = (window.innerWidth - baseWidth * scale) / 2;
-  const offsetY = (window.innerHeight - baseHeight * scale) / 2;
+  // Scale the container
+  app.style.width = baseWidth * scale + "px";
+  app.style.height = baseHeight * scale + "px";
   app.style.position = "absolute";
-  app.style.left = `${offsetX}px`;
-  app.style.top = `${offsetY}px`;
+  app.style.left = (window.innerWidth - baseWidth * scale) / 2 + "px";
+  app.style.top = (window.innerHeight - baseHeight * scale) / 2 + "px";
+
+  // Scale every child element inside #divApplab
+  app.querySelectorAll("*").forEach(el => {
+    if (el.dataset.scaled) return; // prevent double-scaling
+
+    const style = window.getComputedStyle(el);
+
+    // Scale size + position if numeric
+    ["width","height","left","top","fontSize"].forEach(prop => {
+      if (style[prop] && style[prop].includes("px")) {
+        const value = parseFloat(style[prop]);
+        el.style[prop] = value * scale + "px";
+      }
+    });
+
+    el.dataset.scaled = "true"; // mark as scaled once
+  });
 }
 
 window.addEventListener("load", resizeApp);
 window.addEventListener("resize", resizeApp);
 </script>
+
 
 
 
