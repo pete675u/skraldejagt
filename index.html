@@ -47,33 +47,35 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <script>
-  function resizeApp() {
-    const app = document.getElementById("divApplab");
-    if (!app) return;
+function resizeApp() {
+  const app = document.getElementById("divApplab");
+  if (!app) return;
 
-    // Your original app size from App Lab
-    const baseWidth = 320;
-    const baseHeight = 450;
+  // Base size from App Lab export
+  const baseWidth = 320;
+  const baseHeight = 450;
 
-    // Get available screen size
-    const scaleX = window.innerWidth / baseWidth;
-    const scaleY = window.innerHeight / baseHeight;
+  // Current screen size
+  const scaleX = window.innerWidth / baseWidth;
+  const scaleY = window.innerHeight / baseHeight;
 
-    // Pick the smaller scale to keep aspect ratio
-    const scale = Math.min(scaleX, scaleY);
+  // Choose the smaller scale to keep proportions
+  const scale = Math.min(scaleX, scaleY);
 
-    // Apply scale transform
-    app.style.transform = "scale(" + scale + ")";
-    app.style.transformOrigin = "top left";
+  // Apply scaling
+  app.style.transform = `scale(${scale})`;
+  app.style.transformOrigin = "top left";
 
-    // Adjust container to center it
-    app.style.position = "absolute";
-    app.style.left = ((window.innerWidth - baseWidth * scale) / 2) + "px";
-    app.style.top = ((window.innerHeight - baseHeight * scale) / 2) + "px";
-  }
+  // Position so it’s centered
+  const offsetX = (window.innerWidth - baseWidth * scale) / 2;
+  const offsetY = (window.innerHeight - baseHeight * scale) / 2;
+  app.style.position = "absolute";
+  app.style.left = `${offsetX}px`;
+  app.style.top = `${offsetY}px`;
+}
 
-  window.addEventListener("load", resizeApp);
-  window.addEventListener("resize", resizeApp);
+window.addEventListener("load", resizeApp);
+window.addEventListener("resize", resizeApp);
 </script>
 
 
