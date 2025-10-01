@@ -1,4 +1,4 @@
-
+console.log("FUCK THIS");
 function offSet() {
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
