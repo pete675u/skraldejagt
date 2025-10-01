@@ -4,9 +4,10 @@ function offSet() {
   setStyle("divApplab", "left: 500px");
 }
 function offSet2() {
-  setStyle("divApplab", "display", "block");
-  setStyle("divApplab", "margin-left: auto");
-  setStyle("divApplab", "margin-right: auto");
-  setStyle("divApplab", "width: 40%");
+  setStyle("divApplab", "display", "flex");
+  setStyle("divApplab", "justify-content: center");
+  setStyle("divApplab", "align-items: center");
+  setStyle("divApplab", "text-align: center");
+  setStyle("divApplab", "min-height: 100vh");
 }
 offSet2();
