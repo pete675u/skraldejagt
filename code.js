@@ -1,12 +1,12 @@
-function offSet2() {
-//  setStyle("divApplab", "position", "relative");
- // setStyle("divApplab", "top: 0px");
- // setStyle("divApplab", "left: 0px");
-  setStyle("divApplab", "margin: 0");
-  setStyle("divApplab", "padding: 0");
-  setStyle("divApplab", "display", "flex");
-  setStyle("divApplab", "justify-content: center");
-  setStyle("divApplab", "align-items: center");
-  setStyle("divApplab", "text-align: center");
+const box = document.getElementById("divApplab");
+
+function resizeBox() {
+  const width = window.innerWidth;   // get window width
+  box.style.width = width + "px";    // set div width to match window
 }
-//offSet2();
+
+// Run on page load
+resizeBox();
+
+// Update when the window is resized
+window.addEventListener("resize", resizeBox);
