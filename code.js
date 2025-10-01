@@ -6,5 +6,7 @@ function offSet2() {
   setStyle("divApplab", "justify-content: center");
   setStyle("divApplab", "align-items: center");
   setStyle("divApplab", "text-align: center");
+  setStyle("divApplab", "margin: 0");
+  setStyle("divApplab", "padding: 0");
 }
 offSet2();
