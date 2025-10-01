@@ -1,10 +1,9 @@
-fetch('data.json?' + new Date().getTime())
-console.log("FUCK THIS");
+//Ctrl + Shift + R
 function offSet() {
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
 //  setStyle("divApplab", "left: 100vh");
-  setStyle("divApplab", "height: 100vh");
+ setStyle("divApplab", "height: 100vh");
   setStyle("divApplab", "width: 100vw");
 }
 function offSet2() {
@@ -15,4 +14,4 @@ function offSet2() {
   setStyle("divApplab", "width: 30%");
 }
 
-offSet2();
+offSet();
