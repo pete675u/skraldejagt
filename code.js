@@ -4,8 +4,8 @@ function offSet() {
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
 //  setStyle("divApplab", "left: 100vh");
-  setStyle("divApplab", "height: 10vh");
-  setStyle("divApplab", "width: 100vw");
+//  setStyle("divApplab", "height: 10vh");
+//  setStyle("divApplab", "width: 100vw");
 }
 function offSet2() {
   setStyle("divApplab", "display", "flex");
