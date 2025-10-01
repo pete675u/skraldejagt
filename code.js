@@ -9,4 +9,4 @@ function offSet2() {
   setStyle("divApplab", "align-items: center");
   setStyle("divApplab", "text-align: center");
 }
-offSet2();
+//offSet2();
