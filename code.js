@@ -1,4 +1,5 @@
 //Ctrl + Shift + R
+console.log("I am RUNNING");
 function offSet() {
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
