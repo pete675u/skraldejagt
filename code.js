@@ -3,5 +3,10 @@ function offSet() {
   setStyle("divApplab", "top: 200px");
   setStyle("divApplab", "left: 500px");
 }
-
-offSet();
+function offSet2() {
+  setStyle("divApplab", "display", "block");
+  setStyle("divApplab", "margin-left: auto");
+  setStyle("divApplab", "margin-right: auto");
+  setStyle("divApplab", "width: 40%");
+}
+offSet2();
