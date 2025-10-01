@@ -14,4 +14,4 @@ function offSet2() {
   setStyle("divApplab", "width: 30%");
 }
 
-offSet();
+offSet2();
