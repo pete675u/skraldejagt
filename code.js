@@ -5,4 +5,4 @@ function offSet2() {
   setStyle("divApplab", "text-align: center");
   setStyle("divApplab", "min-height: 100vh");
 }
-offSet2();
+//offSet2();
