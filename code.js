@@ -2,6 +2,7 @@
 
 function offSet() {
   setStyle("divApplab", "all: revert");
+  setStyle("divApplab", "display: block");
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
 //  setStyle("divApplab", "left: 100vh");
@@ -18,7 +19,7 @@ function offSet() {
   setStyle("divApplab", "left: -10%");
 //  setStyle("divApplab", "transform: scale(10)");
 //  setStyle("divApplab", "transform: scale(1.3)");
-//  setStyle("divApplab", "transform: translate(-50%, -50%)");
+  setStyle("divApplab", "transform: translate(-50%, -50%)");
 //  setStyle("divApplab", "transform: translate(-50%, -50%)");
   setStyle("divApplab", "transform: scale(130%)");
 //  setStyle("divApplab", "scale: calc(50vw / 1920)");
