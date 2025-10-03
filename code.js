@@ -1,4 +1,5 @@
 //Ctrl + Shift + R
+setStyle("divApplab", "all: unset");
 function offSet() {
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
