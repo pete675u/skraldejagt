@@ -1,12 +1,21 @@
 //Ctrl + Shift + R
-console.log("I am RUNNING");
 function offSet() {
 //  setStyle("divApplab", "position", "relative");
 //  setStyle("divApplab", "top: 100vh");
 //  setStyle("divApplab", "left: 100vh");
-  console.log("I am RUNNING SHIT");
-  setStyle("divApplab", "height: 1vh");
-  setStyle("divApplab", "width: 50vw");
+// setStyle("divApplab", "height: 53.56vh");
+//  setStyle("divApplab", "width: 17.56w");
+//  setStyle("divApplab", "width: 17.56w");
+  
+  setStyle("divApplab", "margin: 0");
+  setStyle("divApplab", "position: absolute");
+  setStyle("divApplab", "top: 50%");
+  setStyle("divApplab", "left: 50%");
+  setStyle("divApplab", "transform: translate(-50%, -50%)");
+
+
+  
+  
 }
 function offSet2() {
   setStyle("divApplab", "display", "flex");
