@@ -15,7 +15,7 @@ function offSet() {
 //  setStyle("divApplab", "transform: scale(10)");
 //  setStyle("divApplab", "transform: translate(-50%, -50%)");
   setStyle("divApplab", "transform: translate(-50%, -50%)");
-  setStyle("divApplab", "transform: scale(2)");
+  setStyle("divApplab", "transform: scale(1.5)");
 
 
   
